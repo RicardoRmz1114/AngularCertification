@@ -1,0 +1,15 @@
+<div class="container">
+    <ul>
+        <ng-container *ngFor="let league of leagues">
+            <li
+            [ngClass]= "{'red' : league.id == countryID}"
+            [routerLink]="'/standings/' + league.id"
+            routerLinkActive="true"
+            (click)="onSelected(league.id)"
+            ><a class="activeEL">{{league.country }}</a>
+            </li>            
+        </ng-container>
+
+    </ul>
+</div>
+<app-results-table></app-results-table>

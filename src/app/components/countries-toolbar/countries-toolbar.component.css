@@ -1,0 +1,43 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+  }
+  
+  li {
+    float: left;
+    font-size: 25px;
+    font-weight: bold;
+
+  }
+
+  
+  li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .container{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+  }
+
+  .activeEL:hover{
+    background-color: #e45656;
+    color: white !important;
+    cursor: pointer;
+  }
+
+  .red a{
+    background-color: #e45656;
+    color: white;
+  }
+
+
+ 

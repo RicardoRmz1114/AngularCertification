@@ -1,0 +1,22 @@
+<ng-container *ngIf="teamData$ | async as teamData">
+    <div class="container">
+        <table>
+            <tbody>
+                <tr *ngFor="let data of teamData;">
+                    <td><img [src]="data.teams.home.logo" alt="Team Logo" width="20" height="20"></td>
+                    <td>{{ data.teams.home.name }}</td>
+                    <td>{{ data.goals.home }}</td>
+                    <td>-</td>
+                    <td>{{ data.goals.away }}</td>
+                    <td>{{ data.teams.away.name }}</td>
+                    <td><img [src]="data.teams.away.logo" alt="Team Logo" width="20" height="20"></td>
+                </tr>
+            </tbody>
+
+        </table>        
+    </div>
+    <div>
+        <button class="button1" (click)="navigateBack()">Go Back</button>
+    </div>
+
+</ng-container>

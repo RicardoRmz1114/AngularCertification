@@ -1,0 +1,31 @@
+<ng-container *ngIf="leagueData$ | async as leagueData">
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Logo</th>
+            <th>Name</th>
+            <th>Games</th>
+            <th>W</th>
+            <th>L</th>
+            <th>D</th>
+            <th>Goald Difference</th>
+            <th>Points</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of leagueData.standings; let i = index">
+            <td>{{ data.rank }}</td>
+            <td><img [src]="data.team.logo" alt="Team Logo" width="20" height="20"></td>
+            <td (click)="selectedTeam(data.team.id)" id="name">{{ data.team.name }}</td>
+            <td>{{ data.all.played }}</td>
+            <td>{{ data.all.win }}</td>
+            <td>{{ data.all.lose }}</td>
+            <td>{{ data.all.draw }}</td>
+            <td>{{ data.goalsDiff }}</td>
+            <td>{{ data.points }}</td>
+        </tr>
+    </tbody>
+</table>
+
+</ng-container>
